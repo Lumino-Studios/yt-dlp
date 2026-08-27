@@ -1,4 +1,4 @@
-name = "yt-dlp-worker"
+name = "yt-dlp"
 main = "worker.py"
 compatibility_date = "2026-08-27"
 compatibility_flags = ["python_workers"]
