@@ -5,3 +5,4 @@ compatibility_flags = ["python_workers"]
 
 [vars]
 # Add any environment variables if needed
+disable_python_external_sdk = true
