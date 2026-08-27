@@ -1,4 +1,8 @@
 name = "yt-dlp"
 main = "worker.py"
 compatibility_date = "2026-07-01"
-compatibility_flags = ["python_workers", "disable_python_external_sdk"]
+compatibility_flags = [
+  "python_workers", 
+  "disable_python_external_sdk", 
+  "disable_python_no_global_handlers"
+]
