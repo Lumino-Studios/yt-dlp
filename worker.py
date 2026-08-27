@@ -1,8 +1,8 @@
-from js import Response
+from js import Response, URL
 import yt_dlp
 
 async def on_fetch(request, env, ctx):
-    url = new URL(request.url).searchParams.get("url")
+    url = URL.new(request.url).searchParams.get("url")
     if not url:
         return Response.new("Please provide a ?url= parameter", status=400)
     
