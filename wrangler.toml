@@ -1,0 +1,6 @@
+name = "my-yt-dlp-worker"
+main = "worker.py"  # Or whatever your Python entry point file is named
+compatibility_date = "2026-08-27"
+
+[vars]
+# Add any environment variables if needed
