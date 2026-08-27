@@ -1,12 +1,13 @@
 from js import Response, URL
-import yt_dlp
 
 async def on_fetch(request, env, ctx):
     url = URL.new(request.url).searchParams.get("url")
     if not url:
         return Response.new("Please provide a ?url= parameter", status=400)
     
-    # Basic yt-dlp extraction logic
+    # Import yt-dlp here inside the request context
+    import yt_dlp
+    
     ydl_opts = {'format': 'best'}
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
