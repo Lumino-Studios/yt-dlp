@@ -5,7 +5,6 @@ async def on_fetch(request, env, ctx):
     if not url:
         return Response.new("Please provide a ?url= parameter", status=400)
     
-    # Import yt-dlp here inside the request context
     import yt_dlp
     
     ydl_opts = {'format': 'best'}
